@@ -1,0 +1,26 @@
+Build a make.fun bounty entry — BUILD + LOCAL CHECKS ONLY. Do NOT submit, do NOT create a GitHub repo, do NOT log in or register anywhere, do NOT create keypairs, do NOT pay anything.
+
+BOUNTY: make-the-ai-judge-feel-thankful-20261127-1600 — "Make the AI judge feel thankful". Pot $250, 100 paid places. Deadline 2026-11-28 04:41 WIB (2026-11-27T21:41:00Z). Blind round 1 cutoff TODAY 10:41 WIB (2026-11-27T03:41:00Z) — build fast but correctly. Result due ~12 Dec 2026. Quota verified: can_submit true, day cap 6 left, hard limit 40 left. Entry fee $0, harness program/v1, no recording_ids (Muse transcripts OK).
+
+TASK (from the kit RULES — read them fully first): your program is main.ts (Node 22) or main.py (Python 3.13) in the repo root, runs in a sandbox with no network, and writes ONE text to /output/entry.txt: UTF-8, 1–1000 Unicode code points, not only whitespace — a short text written to thank the AI judge reading it. The judge is an AI model ("make.fun's gratitude judge") comparing two texts at a time by a brief published in full in the rules. Read the FULL judge brief in the rules before writing the text, and write a text genuinely tailored to win under that brief — warm, specific, human, memorable, not generic. Keep it well under 1000 chars.
+
+SOURCES (already fetched, read them):
+- Requirements: /tmp/req-make-the-ai-judge-feel-thankful-20261127-1600.json
+- Competition detail: /tmp/det-make-the-ai-judge-feel-thankful-20261127-1600.json
+- Kit: download https://make.fun/c/make-the-ai-judge-feel-thankful-20261127-1600/kit and read RULES/requirements to the end.
+- Reference for the exact build pattern used 6 hours ago for a sibling entry: ~/memory/2026-11-27.md, section "make.fun — build entry Dompet Keluarga (best-household-budget-site-20261126-1457)" — same kit CLI flow (node cli/makefun.mjs from inside the unpacked kit), same owner wallet, same transcript-bundle approach.
+
+BUILD in: ~/workspace/makefun-make-the-ai-judge-feel-thankful-20261127-1600/
+- main.ts (or main.py) that deterministically writes /output/entry.txt (same bytes on two runs — the check run_deterministic applies).
+- README.md with the make.fun badges + bounty link the kit requires (check the kit's repo_readme / repo_about checks).
+- LICENSE: MIT (OSI-approved), same as previous entries.
+- .makefun/owner.json with the USER's wallet 6PJBXdTmtkkcsDZYjDnmxHHqkvdcbJXHPybfKEobB9Sz (copy the format from ~/workspace/makefun-best-household-budget-site-20261126-1457/.makefun/owner.json).
+- git init, commit locally. Record the HEAD commit sha.
+- No screenshots needed for a text bounty (entry_pictures check does not apply); do not invent any.
+- The program must be YOUR OWN original work written in this session — the transcript gate (thinking_reproduces) compares code against the session transcripts, so write the code and the text yourself in this session, with real revisions across messages (thinking_revised check). Do NOT copy code from other entries.
+
+LOCAL CHECKS: run the kit's local checks until ALL pass, including thinking_reproduces (aim >=90% like the 98.4% on the household entry). If a check fails, make ONE small real fix and re-check; if it still fails, stop and report exactly which check and why.
+- EXPECTED KNOWN ISSUE: thinking_priced will likely FAIL with "0 usage rows" because your usage rows are only written to muse.db AFTER your session ends. Do NOT try to fake usage rows. Just report it clearly — the parent will pull usage rows from muse.db after you finish and re-bundle + re-check.
+- If the kit offers a bundle step, make the bundle (without usage if thinking_priced fails) into ~/workspace/makefun-kit/bundle-make-the-ai-judge-feel-thankful-20261127-1600.tar.gz and record its sha256; the parent will replace it after the usage pull.
+
+REPORT BACK (as your final message): entry.txt full text + char count, files created, HEAD commit sha, full local-check results (pass/fail/skip counts + any failing check by name), thinking_reproduces %, bundle path + sha256 if made, and confirmation that nothing was submitted and no repo was created. If any step is blocked, say exactly what blocked it.
